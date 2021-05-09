@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "title": "phone",
+            "value": "312-111-7990",
+            "icon": "phone-icon.png",
+            "url": "tel:3121117990"
+        },
+        {
+            "title": "mail",
+            "value": "fidelgarcia.soft@gmail.com",
+            "icon": "email-icon.png",
+            "url": "mailto:fidelgarcia.soft@gmail.com"
+        },
+        {
+            "title": "linkedin",
+            "value": "Fidel García Barajas",
+            "icon": "linkedin-icon.png",
+            "url": "https://www.linkedin.com/in/fgarcia14"
+        },
+        {
+            "title": "twitter",
+            "value": "@fgarcia14_",
+            "icon": "twitter-icon.png",
+            "url": "https://www.twitter.com/fgarcia14_"
+        }
+    ]
+}
