@@ -9,6 +9,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo "Deploy a Github Pages"
+        shell: bash
+      - run: echo "Hacemos el build"
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
       - uses: erickzanardo/flutter-gh-pages@v3
+
+      - run: echo "Copiamos los assets de manera temporal"
+        shell: bash
+      - run: cp -r assets build/web/
+        shell: bash
+      - run: git config user.name github-actions
+        shell: bash
+      - run: git config user.email github-actions@github.com
+        shell: bash
+      - run: git --work-tree build/web add --all
+        shell: bash
+      - run: git commit -m "Automatic deployment by github-actions"
+        shell: bash
+      - run: git push origin HEAD:gh-pages --force
+        shell: bash
