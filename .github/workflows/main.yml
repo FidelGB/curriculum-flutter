@@ -11,11 +11,14 @@ jobs:
     steps:
       - run: echo "Deploy a Github Pages"
         shell: bash
-      - run: echo "Hacemos el build"
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
-      - uses: erickzanardo/flutter-gh-pages@v3
-
+      - run: flutter config --enable-web
+        shell: bash
+      - run: flutter pub get
+        shell: bash
+      - run: flutter build web --release
+        shell: bash
       - run: echo "Copiamos los assets de manera temporal"
         shell: bash
       - run: cp -r assets build/web/
